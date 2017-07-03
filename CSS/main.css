@@ -1,0 +1,173 @@
+/* Main content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+main {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrap {
+    max-width: 1056px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.red {
+    color: darkred;
+}
+
+.mr {
+    margin-right: 32px ;
+}
+
+
+.y-center {
+    align-items: center;
+}
+
+.y-small {
+    flex-direction: column;
+}
+
+/* Responsive
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.dif {
+    display: inline-flex;
+}
+
+
+@media screen and (max-width: 640px) {
+    .y-small {
+        flex-direction: column;
+    }
+}
+
+.ht-l {
+    height: 72px;
+}
+
+.x-start {
+    justify-content: flex-start;
+}
+
+.x-end {
+    justify-content: flex-end!important;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.y-start {
+    align-items: flex-start;
+}
+
+.df {
+    display: flex;
+}
+
+/*@media screen and (max-width: 640px) {
+    .y-small {
+        flex-direction: column;
+    }
+}
+*/
+
+
+.x-large {
+    flex-direction: row;
+}
+
+
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+}
+
+/* font size */
+
+.f1 {
+    font-size: 3rem; line-height: 4rem; letter-spacing: 0.04em;
+}
+
+.f2 {
+    font-size: 2rem; line-height: 2.5rem; letter-spacing: 0.04em;
+}
+
+.f3 {
+    font-size: 1.5rem; line-height: 2rem; letter-spacing: 0.04em;
+}
+
+.f4 {
+    font-size: 3rem; line-height: 1.5rem; letter-spacing: 0.04em;
+}
+
+
+/* color */
+
+.white {
+    color: rgba(255, 255, 255, 1);
+}
+
+.white-60 {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.blue {
+    color: green;
+}
+
+.bg-black {
+    background-color: #24252B;
+}
+
+
+/* NOTE
+Remove the default underline in browser */
+
+a {
+    text-decoration:none
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+
+/* For devices larger than 320px */
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 640px) {
+
+}
+
+/* For devices larger than 640px */
+@media (min-width: 640px) {
+
+}
+
+/* For tablet landscape */
+@media (min-width: 550px) {
+
+}
+
+/* For laptop */
+@media (min-width: 550px) {
+
+}
+
