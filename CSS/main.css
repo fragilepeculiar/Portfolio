@@ -104,6 +104,10 @@
     margin-top: 24px;
 }
 
+.mt20 {
+    margin-top: 20px;
+}
+
 .mt8 {
     margin-top: 8px;
 }
@@ -112,31 +116,31 @@
     margin-bottom: 14px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .sec-row-large {
         flex-direction: row;
-    }
-    .width-40-large {
-        width: 40%;
         padding-right: 36px;
     }
     .width-60-large {
-        width: 60%;
+        flex-grow: 60%;
+    }
+    .width-40-large {
+        flex-grow: 40%;
     }
     .order1-large {
         order: 1;
     }
     .order2-large {
-        order: 99;
+        order: 2;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .sec-column-small {
         flex-direction: column;
     }
     .width-100-small {
-        width: 100%;
+        flex-grow: 1;
     }
 }
 
