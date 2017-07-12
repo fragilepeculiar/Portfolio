@@ -11,15 +11,58 @@ ul {
     padding: 0;
 }
 
-
+/* make content center */
 .wrap {
-    max-width: 1056px;
+    max-width: 1136px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.red {
-    color: darkred;
+/* device larger than 640px */
+@media (min-width: 640px) {
+    .padding-large {
+        padding: 0 40px;
+    }
+}
+
+/* device smaller than 640px */
+@media (max-width: 640px) {
+    .padding-small {
+        padding: 0 24px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Navigation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.df {
+    display: flex;
+}
+
+
+@media (min-width: 640px) {
+    .row-large {
+        flex-direction: row;
+        height: 72px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .column-small {
+        flex-direction: column;
+        height: 120px;
+        justify-content: center;
+        align-items: flex-start;
+    }
 }
 
 .mr {
@@ -27,80 +70,31 @@ ul {
 }
 
 
-.y-center {
-    align-items: center;
-}
-
-.y-small {
-    flex-direction: column;
-}
-
-/* Responsive
+/* Introduction
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.dif {
-    display: inline-flex;
-}
-
-
-@media screen and (max-width: 640px) {
-    .y-small {
-        flex-direction: column;
+@media (min-width: 640px) {
+    .p1-large {
+        font-size: 3rem; line-height: 4rem; letter-spacing: 0.04em;
+        margin-top: 88px;
     }
-}
 
-.ht-l {
-    height: 72px;
-}
-
-
-.flex-grow {
-    flex-grow: 1;
-}
-
-
-.x-end {
-    justify-content: flex-end;
-}
-
-.x-start {
-    justify-content: flex-start;
-}
-
-.y-start {
-    align-items: flex-start;
-}
-
-
-.df {
-    display: flex;
-}
-
-.height-72 {
-    height: 72px;
-}
-
-.row-large {
-    flex-direction: row;
+    .p2-large {
+        font-size: 2rem; line-height: 2.5rem; letter-spacing: 0.04em;
+        margin-top: 16px;
+    }
 }
 
 @media (max-width: 640px) {
-    .column-small {
-        flex-direction: column;
+    .p1-small {
+        font-size: 2rem; line-height: 2.5rem; letter-spacing: 0.04em;
     }
-    .height-120 {
-        height: 120px;
+
+    .p2-small {
+        font-size: 1rem; line-height: 1.5rem; letter-spacing: 0.04em;
+        margin-top: 4px;
     }
 }
-
-
-
-
-.x-large {
-    flex-direction: row;
-}
-
-
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -162,27 +156,4 @@ a:hover {
 }
 
 
-/* For devices larger than 320px */
-@media (min-width: 320px) {
-
-}
-
-@media (min-width: 640px) {
-
-}
-
-/* For devices larger than 640px */
-@media (min-width: 640px) {
-
-}
-
-/* For tablet landscape */
-@media (min-width: 550px) {
-
-}
-
-/* For laptop */
-@media (min-width: 550px) {
-
-}
 
