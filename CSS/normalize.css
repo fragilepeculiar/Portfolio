@@ -3,10 +3,21 @@
  * Remove default margin and padding.
  */
 
-body {
+body, h1, h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
 }
+
+main {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 
 /**
  * Remove the gray background color from active links in IE 10.
@@ -15,7 +26,7 @@ body {
 a {
     background-color: transparent;
 
-}    color: ;
+}
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
