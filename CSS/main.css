@@ -122,10 +122,10 @@
         padding-right: 36px;
     }
     .width-60-large {
-        flex-grow: 60%;
+        flex-basis: 60%;
     }
     .width-40-large {
-        flex-grow: 40%;
+        flex-basis: 40%;
     }
     .order1-large {
         order: 1;
