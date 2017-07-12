@@ -7,6 +7,7 @@
     max-width: 1136px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 80px;
 }
 
 /* device larger than 640px */
@@ -51,7 +52,7 @@
         justify-content: center;
         align-items: flex-start;
     }
-    .mt-small {
+    .mt22 {
         margin-top: 22px;
     }
 }
@@ -90,21 +91,50 @@
 /* Section-projects
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.db {
+    display: block;
+}
+
 .space {
     margin-top: 96px;
     margin-bottom: 40px;
 }
 
-@media (min-width: 640px) {
-    .width-44-large {
-        width: 44%;
+.mt24 {
+    margin-top: 24px;
+}
+
+.mt8 {
+    margin-top: 8px;
+}
+
+.mb14 {
+    margin-bottom: 14px;
+}
+
+@media (min-width: 768px) {
+    .sec-row-large {
+        flex-direction: row;
     }
-    .width-56-large {
-        width: 56%;
+    .width-40-large {
+        width: 40%;
+        padding-right: 36px;
+    }
+    .width-60-large {
+        width: 60%;
+    }
+    .order1-large {
+        order: 1;
+    }
+    .order2-large {
+        order: 99;
     }
 }
 
-@media (min-width: 640px) {
+@media (max-width: 768px) {
+    .sec-column-small {
+        flex-direction: column;
+    }
     .width-100-small {
         width: 100%;
     }
@@ -150,7 +180,7 @@ a, p, h1, h2, h3, h4, h5 {
 }
 
 .blue {
-    color: green;
+    color: #95A6FF;
 }
 
 .bg-black {
