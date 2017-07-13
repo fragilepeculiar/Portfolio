@@ -169,6 +169,14 @@
     }
 }
 
+/* Section-other work
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 960px) {
+    .sb-large {
+        justify-content: space-between;
+    }
+}
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
