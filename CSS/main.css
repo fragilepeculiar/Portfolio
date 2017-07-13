@@ -8,6 +8,8 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* device larger than 640px */
@@ -134,10 +136,11 @@
         flex-direction: row;
     }
     .width-58-large {
-        flex: 58;
+        flex: 6;
+        border: 2px solid #95A6FF;
     }
     .width-42-large {
-        flex: 42;
+        flex: 4;
         padding-right: 32px;
     }
     .order1-large {
@@ -154,10 +157,9 @@
 @media (max-width: 960px) {
     .sec-column-small {
         flex-direction: column;
-
     }
     .width-100-small {
-        flex-grow: 1;
+        border: 2px solid #95A6FF;
     }
     .h3-small {
         font-size: 1rem; line-height: 1.5rem; letter-spacing: 0.04em;
