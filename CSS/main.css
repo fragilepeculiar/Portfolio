@@ -97,6 +97,10 @@
     display: block;
 }
 
+.mt112 {
+    margin-top: 112px;
+}
+
 .mt24 {
     margin-top: 24px;
 }
@@ -136,11 +140,11 @@
         flex-direction: row;
     }
     .width-58-large {
-        flex: 6;
+        flex: 62;
         border: 2px solid #95A6FF;
     }
     .width-42-large {
-        flex: 4;
+        flex: 38;
         padding-right: 32px;
     }
     .order1-large {
