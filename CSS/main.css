@@ -39,7 +39,7 @@
 }
 
 @media (min-width: 640px) {
-    .row-large {
+    .nav-row-large {
         flex-direction: row;
         height: 72px;
         justify-content: space-between;
@@ -48,13 +48,13 @@
 }
 
 @media (max-width: 640px) {
-    .column-small {
+    .nav-column-small {
         flex-direction: column;
         height: 120px;
         justify-content: center;
         align-items: flex-start;
     }
-    .mt22 {
+    .mt22-small {
         margin-top: 22px;
     }
 }
@@ -176,7 +176,32 @@
 }
 
 
+@media (min-width: 960px) {
+    .footer-row-large {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+}
+
+
+@media (max-width: 960px) {
+    .footer-column-medium {
+        flex-direction: column;
+    }
+    .mt20-medium {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-column-small {
+        flex-direction: column;
+    }
+    .mt20-small {
+        margin-top: 20px;
+    }
+}
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -217,23 +242,34 @@ a, p, h1, h2, h3, h4, h5 {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.blue {
-    color: #95A6FF;
-}
-
 .bg-black {
     background-color: #24252B;
 }
 
-.nav-link {
+.nav-link:hover {
+    color: white;
+    border-bottom: 2px solid white;
     cursor: pointer;
     transition: color .25s ease;
 }
 
-.sec-link {
+.blue {
+    color: #95A6FF;
     height: 24px;
     border-bottom: 2px solid;
     display: inline-block;
+}
+
+.sec-link:hover {
+    color: #B0BCFC;
+    cursor: pointer;
+    transition: color .25s ease;
+}
+
+.ct-link:hover {
+    border-bottom: 2px solid white;
+    cursor: pointer;
+    transition: color .25s ease;
 }
 
 /* NOTE
