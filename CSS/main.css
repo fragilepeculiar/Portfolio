@@ -171,10 +171,18 @@
 
 /* Section-contact
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.icon1 {
-    background-image: url("/img/Linkedln.svg");
+
+.dif {
+    display: inline-flex;
 }
 
+.y-center {
+    align-items: center;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
 
 @media (min-width: 960px) {
     .footer-row-large {
