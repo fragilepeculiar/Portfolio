@@ -1,6 +1,9 @@
 /* Main content
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+/* change select color */
+.select::selection {
+    background-color: white;
+}
 
 /* make content center */
 .wrap {

@@ -1,0 +1,30 @@
+{
+  "name": "0703test",
+  "version": "1.0.0",
+  "description": "test my website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "clean": "rm -r ./dist",
+    "cp:img": "cp -rf src/img dist/",
+    "gulp": "gulp",
+    "build": "npm run clean & npm run build:css & npm run cp:img & gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/desertsfan/0703test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/desertsfan/0703test/issues"
+  },
+  "homepage": "https://github.com/desertsfan/0703test#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-html-extend": "^1.1.6",
+    "less": "^2.7.2",
+    "semver": "^5.3.0"
+  }
+}
