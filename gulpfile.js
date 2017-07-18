@@ -1,33 +1,50 @@
-//
-// const gulp = require('gulp'),
-//     extender = require('gulp-html-extend');
-//
-// const input_path = "./src/",
-//     output_path = "./dist/";
-//
-// const html_path = input_path + "";
-//
-// var htmls = ["portfolio"],
-//     html_list = [];
-//
-// for (index in htmls) {
-//     html_list[index] = html_path + htmls[index] + ".html";
-// }
-//
-// console.log(html_list);
-//
-// gulp.task('extend', function () {
-//     gulp.src(html_list)
-//         .pipe(extender({annotations: true, verbose: false}))
-//         .pipe(gulp.dest(output_path));
-// });
-//
-//
-// gulp.task('watch', function () {
-//     gulp.watch(html_path + '/*.html', ['extend']);
-// });
-//
-// gulp.task('default', function () {
-//     gulp.run('extend');
-//     // gulp.run('watch');   # 暂时无需监听，注释掉
-// });
+// 获取 gulp
+var gulp = require('gulp');
+var htmlminify = require("gulp-html-minify");
+var imagemin = require("gulp-imagemin")
+var minifyCSS = require('gulp-minify-css')
+
+// 压缩 css 文件
+// 在命令行使用 gulp css 启动此任务
+gulp.task('css', function () {
+    // 1. 找到文件
+    gulp.src('CSS/*.css')
+    // 2. 压缩文件
+        .pipe(minifyCSS())
+        // 3. 另存为压缩文件
+        .pipe(gulp.dest('dist/CSS'))
+})
+
+// 在命令行使用 gulp auto 启动此任务
+gulp.task('auto', function () {
+    // 监听文件修改，当文件被修改则执行 css 任务
+    gulp.watch('CSS/*.css', ['css'])
+    gulp.watch('img/*.*)', ['img'])
+    gulp.watch('*.html',[])
+});
+
+// 使用 gulp.task('default') 定义默认任务
+// 在命令行使用 gulp 启动css等任务
+gulp.task('default', ['css', 'auto', 'build-html', 'img'])
+
+
+gulp.task('build-html' , function(){
+    return gulp.src("*.html")
+        .pipe(htmlminify())
+        .pipe(gulp.dest("dist"))
+});
+
+// 压缩图片任务
+// 在命令行输入 gulp images 启动此任务
+gulp.task('img', function () {
+    // 1. 找到图片
+    gulp.src('img/*.*')
+    // 2. 压缩图片
+        .pipe(imagemin({
+            progressive: true
+        }))
+        // 3. 另存图片
+        .pipe(gulp.dest('dist/img'))
+});
+
+
