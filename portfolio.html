@@ -35,6 +35,16 @@
     <link href="CSS/normalize.css" rel="stylesheet">
     <link href="CSS/main.css" rel="stylesheet">
 
+    <!-- Smooth scroll -->
+    <script src="https://cferdinandi.github.io/smooth-scroll/dist/js/smooth-scroll.js"></script>
+
+    <script>
+        smoothScroll.init({
+            selector: 'a[href*="#"]'
+            }
+        );
+    </script>
+
     <!-- Favicon
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="shortcut icon" type="image/x-icon" href="/img/logo.png">
@@ -51,7 +61,11 @@
         </div>
         <ul class="df mt22-small">
             <li>
-                <a href="/" class="nav-link white-60 f4 mr" title="projects">
+                <a data-scroll data-options='{
+                    "speed": 500,
+                    "easing": "easeInOutCubic",
+                    "offset": 64
+                }' href="#projects" class="nav-link white-60 f4 mr" title="projects">
                     Projects
                 </a>
             </li>
@@ -61,7 +75,7 @@
                 </a>
             </li>
             <li>
-                <a href="/" class="nav-link white-60 f4" title="contact">
+                <a data-scroll href="#contact" class="nav-link white-60 f4" title="contact">
                     Contact
                 </a>
             </li>
@@ -76,7 +90,7 @@
             In my spare time, I’m also a visual explorer and CSS lover.
         </p>
     </div>
-    <h2 class="h2-large h2-small white-60">
+    <h2 id="projects" class="h2-large h2-small white-60">
         Projects
     </h2>
     <ul>
@@ -171,7 +185,7 @@
             </div>
         </li>
     </ul>
-    <h2 class="h2-large h2-small white-60">
+    <h2 id="contact" class="h2-large h2-small white-60">
         Contact
     </h2>
     <div class="df footer-row-large footer-column-medium">
@@ -231,5 +245,8 @@
     <!--</section>-->
 
 </main>
+<script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script>
+
 </body>
+
 </html>
