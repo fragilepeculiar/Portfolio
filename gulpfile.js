@@ -9,11 +9,11 @@ var uglify = require('gulp-uglify')
 // 在命令行使用 gulp css 启动此任务
 gulp.task('css', function () {
     // 1. 找到文件
-    gulp.src('CSS/*.css')
+    gulp.src('css/*.css')
     // 2. 压缩文件
         .pipe(minifyCSS())
         // 3. 另存为压缩文件
-        .pipe(gulp.dest('dist/CSS'))
+        .pipe(gulp.dest('dist/css'))
 })
 
 // 压缩图片任务
@@ -39,21 +39,21 @@ gulp.task('build-html' , function(){
 // 压缩 js 文件
 gulp.task('script', function() {
     // 1. 找到文件
-    gulp.src('JS/*.js')
+    gulp.src('js/*.js')
     // 2. 压缩文件
         .pipe(uglify())
         // 3. 另存压缩后的文件
-        .pipe(gulp.dest('dist/JS'))
+        .pipe(gulp.dest('dist/js'))
 })
 
 
 // 在命令行使用 gulp auto 启动此任务
 gulp.task('auto', function () {
     // 监听文件修改，当文件被修改则执行 css 任务
-    gulp.watch('CSS/*.css', ['css'])
+    gulp.watch('css/*.css', ['css'])
     gulp.watch('img/*.*)', ['img'])
     gulp.watch('*.html',['build-html'])
-    gulp.watch('JS/*.js', ['script'])
+    gulp.watch('js/*.js', ['script'])
 });
 
 // 在命令行使用 gulp 启动css等任务
