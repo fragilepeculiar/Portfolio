@@ -1,7 +1,7 @@
 /* Main content
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* change select color */
-.select::selection {
+::selection {
     background-color: white;
 }
 
